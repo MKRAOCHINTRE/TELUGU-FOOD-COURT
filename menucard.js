@@ -34,9 +34,7 @@ function updateCart() {
                 <img src="${item.img}" class="rounded me-3" style="width:70px;height:70px;object-fit:cover;">
                 <div class="flex-grow-1">
                     <strong style="color:#6B3E1A;">${item.name}</strong><br>
-                    <small class="text-muted">${item.qty} × ₹${item.price} each = 
-                        <strong class="text-success">₹${subtotal}</strong>
-                    </small>
+                    <small class="text-muted">${item.qty} × ₹${item.price} each = <strong class="text-success">₹${subtotal}</strong></small>
                 </div>
                 <button class="btn btn-danger btn-sm rounded-circle" onclick="removeItem(${i})">
                     <i class="fas fa-trash"></i>
@@ -56,14 +54,14 @@ function removeItem(index) {
     updateCart();
 }
 
-// Run updateCart when page loads
+// Run on page load
 document.addEventListener('DOMContentLoaded', updateCart);
 
 // Normal items
 document.querySelectorAll('.btn-order:not(.order-with-plate)').forEach(btn => {
     btn.addEventListener('click', () => {
         const name = btn.dataset.name;
-        const price = parseInt(btn.dataset.price);
+        const price = parseInt(btn.dataset.price.trim(), 10);
         const img = btn.dataset.img;
 
         const qty = parseInt(prompt(`How many ${name}? (₹${price} each)`, "1") || "0");
@@ -79,7 +77,7 @@ document.querySelectorAll('.btn-order:not(.order-with-plate)').forEach(btn => {
     });
 });
 
-// Plate selection items (like Fry Biryani)
+// Plate selection items (Fry Biryani etc.)
 document.querySelectorAll('.order-with-plate').forEach(btn => {
     btn.addEventListener('click', () => {
         const baseName = btn.dataset.baseName;
@@ -89,7 +87,7 @@ document.querySelectorAll('.order-with-plate').forEach(btn => {
         if (!radio) return alert("Please select Half or Full plate!");
 
         const plateType = radio.value === 'full' ? 'Full Plate' : 'Half Plate';
-        const price = parseInt(radio.dataset.price);
+        const price = parseInt(radio.dataset.price.trim(), 10);
         const fullName = `${baseName} - ${plateType}`;
 
         const qty = parseInt(prompt(`How many ${fullName}? (₹${price} each)`, "1") || "0");
@@ -105,22 +103,21 @@ document.querySelectorAll('.order-with-plate').forEach(btn => {
     });
 });
 
-// MAIN FIX: Place Order with "Want More?" + WhatsApp
-// Place Order - Improved for better WhatsApp compatibility
+// FINAL FIXED: Place Order → Direct Redirect to WhatsApp (No Popup Block)
 document.getElementById('placeOrderBtn').addEventListener('click', () => {
     if (cart.length === 0) return alert("Your cart is empty!");
 
-    const wantsMore = confirm("Do you want to add more items?\nOK = Continue shopping\nCancel = Place order now");
+    const wantsMore = confirm("Do you want to add more items?\nOK = Continue shopping\nCancel = Place final order");
     if (wantsMore) {
         window.location.href = "menucard.html"; // Your main menu page
         return;
     }
 
-    const address = prompt("📍 Enter your delivery address:");
+    const address = prompt("Enter your delivery address:");
     if (!address?.trim()) return alert("Address required!");
 
-    let message = "*New Order - Telugu Food Court* 🍛\n\n";
-    message += "*memu pettina orders 🍛:*\n";
+    let message = "*New Order - Telugu Food Court*\n\n";
+    message+="memu pettina orders:\n"
     let total = 0;
     cart.forEach(item => {
         const amt = item.price * item.qty;
@@ -128,33 +125,26 @@ document.getElementById('placeOrderBtn').addEventListener('click', () => {
         message += `• ${item.name} × ${item.qty} = ₹${amt}\n`;
     });
     message += `\n*Total: ₹${total}*\n`;
-   message += `*Address:* ${address.trim()}\n\nEvi chalu inka kavali ante memu order chestham\n\nTHANK YOU 🙏`;
+    message += `*Address:* ${address.trim()}\n\nThondarga Thisukoni Randi Memu Wait Chesthunam\n\nThank you! `;
 
-    // Fill the copy message box (for desktop fallback)
+    // Fill copy box for desktop fallback
     const copyBox = document.getElementById('copyMessage');
-    if (copyBox) copyBox.textContent = message.replace(/\n/g, '\n'); // Preserve line breaks
+    if (copyBox) copyBox.textContent = message;
 
-    const phone = "918247544593"; // Your number (no + or spaces)
-    const encodedMsg = encodeURIComponent(message);
-    const whatsappURL = `https://wa.me/${phone}?text=${encodedMsg}`;
+    const phone = "918881112204"; // ← Your WhatsApp number
+    const encoded = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${phone}?text=${encoded}`;
 
-    // Try to open WhatsApp
-    const opened = window.open(whatsappURL, '_blank');
+    // DIRECT REDIRECT — No popup blocker!
+    window.location.href = whatsappURL;
 
-    if (!opened) {
-        alert("Popup blocked! Please allow popups and try again, or copy the message below and paste in WhatsApp manually.");
-    } else {
-        // Small delay to let WhatsApp load
-        setTimeout(() => {
-            alert("WhatsApp opened! If message didn't appear, copy it from the cart modal and paste it.");
-        }, 1000);
-    }
-
-    // Optional: Clear cart after order
-    if (confirm("Order sent! Clear cart now?")) {
-        cart = [];
-        saveCart();
-        updateCart();
-        bootstrap.Modal.getInstance(document.getElementById('cartModal')).hide();
-    }
+    // Clear cart after redirect
+    setTimeout(() => {
+        if (confirm("Order sent! Clear cart?")) {
+            cart = [];
+            saveCart();
+            updateCart();
+        }
+    }, 10000);
 });
+
