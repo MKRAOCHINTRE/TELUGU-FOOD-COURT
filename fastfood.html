@@ -551,8 +551,8 @@ document.querySelectorAll('.order-with-plate').forEach(btn => {
 document.getElementById('placeOrderBtn').addEventListener('click', () => {
     if (cart.length === 0) return alert("Your cart is empty!");
 
-    const wantsMore = confirm("Do you want to add more items?\nOK = Continue shopping\nCancel = Place final order");
-    if (wantsMore) {
+  const wantsMore = confirm("Are You Ready for order or Do you want to add more items?\nOK = Ready For Order\nCancel = Add More Items");
+    if (!wantsMore) {
         window.location.href = "menucard.html"; // Your main menu page
         return;
     }
@@ -595,4 +595,5 @@ document.getElementById('placeOrderBtn').addEventListener('click', () => {
 </body>
 
 </html>
+
 
