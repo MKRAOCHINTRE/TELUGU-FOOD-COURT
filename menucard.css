@@ -1,0 +1,231 @@
+/* Updated styles.css - More Attractive & Beautiful Design */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f5e9d8 url('https://img.freepik.com/free-photo/old-paper-texture-background_1404-214.jpg?w=1800') repeat; /* Subtle vintage paper texture for warmth & elegance */
+    background-attachment: fixed;
+    color: #4A2C0B; /* Deep warm brown for text - excellent readability */
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+    color: #6B3E1A; /* Rich saddle brown for headings */
+}
+
+.navbar {
+    background-color: #fffaf0 !important; /* Cream white */
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.15); /* Softer shadow for depth */
+    padding: 0.8rem 1rem;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #8b4513 !important; /* Saddle brown */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #d2691e !important; /* Chocolate hover */
+}
+
+.navbar-brand img {
+    border-radius: 30px; /* Slight round for elegance */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(2.08);
+}
+
+.nav-link {
+    color: #8b4513 !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+}
+
+.nav-link:hover {
+    color: #d2691e !important;
+    background-color: rgba(210, 105, 30, 0.1); /* Subtle hover background */
+    border-radius: 8px;
+}
+
+.banner {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(107, 62, 26, 0.4), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+}
+
+.banner img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(70%) sepia(20%);
+}
+
+.banner > * {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-overlay h1 {
+    color: #fff;
+    letter-spacing: 5px;
+    text-shadow: 4px 4px 15px rgba(0,0,0,0.9);
+}
+
+.banner-overlay p {
+    color: #fff;
+    letter-spacing: 6px;
+    text-shadow: 3px 3px 12px rgba(0,0,0,0.9);
+}
+
+.carousel-caption {
+    background: rgba(107, 62, 26, 0.85); /* Deeper brown transparent */
+    padding: 18px 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(212, 160, 23, 0.3);
+}
+
+.carousel-caption h3 {
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.carousel-caption p {
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+/* Sections */
+#specialties, .about, .offer {
+    background-color: rgba(255, 250, 240, 0.9); /* Soft cream overlay on body texture */
+    padding: 80px 0;
+}
+
+
+#specialties .card {
+    background: #fffaf0;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(107, 62, 26, 0.1);
+    transition: all 0.4s ease;
+}
+
+#specialties .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(107, 62, 26, 0.2);
+}
+
+#specialties .card-img-top {
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+#specialties .card:hover .card-img-top {
+    transform: scale(1.08);
+}
+
+#specialties .btn-outline-primary {
+    border-color: #D4A017;
+    color: #D4A017;
+    font-weight: bold;
+}
+
+#specialties .btn-outline-primary:hover {
+    background-color: #D4A017;
+    color: #fff;
+}
+
+.footer {
+    background: linear-gradient(to top, #2c1810, #4A2C0B);
+    color: #f8f5f0;
+}
+
+.footer h3 {
+    color: #D4A017; /* Golden title */
+}
+
+.social-icons a:hover {
+    color: #D4A017;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+/* Mobile adjustments (enhanced) */
+@media (max-width: 768px) {
+    .banner-overlay h1 { font-size: 2.8rem; letter-spacing: 3px; }
+    .banner-overlay p { font-size: 1.5rem; letter-spacing: 3px; }
+    .carousel-caption { padding: 12px 25px; }
+    .carousel-caption h3 { font-size: 1.8rem; }
+}
+
+@media (max-width: 576px) {
+    .banner-overlay h1 { font-size: 2.4rem; }
+    .navbar-brand { font-size: 1.6rem; }
+}
+/* Floating Cart Button - Perfectly Centered & Beautiful */
+#cartBtn {
+    width: 70px;
+    height: 70px;
+    background: #ffc107; /* Bootstrap warning yellow */
+    border: none;
+    border-radius: 50%; /* Perfect circle */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* For badge positioning */
+    transition: all 0.3s ease;
+    z-index: 1050;
+}
+
+#cartBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+#cartBtn i {
+    font-size: 1.8rem;
+    color: #212529; /* Dark color for icon */
+}
+
+/* Badge - Perfectly positioned top-right */
+#cartCount {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #dc3545; /* Red */
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white; /* White ring for premium look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 193, 7, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+}
+
+#cartBtn {
+    animation: pulse 2s infinite;
+}

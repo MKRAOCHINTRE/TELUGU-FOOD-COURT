@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="staters.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="https://ik.imagekit.io/lxaeyc1t1/tfc-2.png" alt="Telugu Food Court Logo" class="me-2" style="height: 40px;">
+    <!-- <span>TFC</span> -->
+</a>
+            <h2 class="navbar-brand">TFC</h2>    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menucard.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Add this section right after the navbar and before the footer in your HTML -->
+<!-- STARTERS SECTION WITH CART & WHATSAPP ORDER -->
+<section id="starters" class="py-5" style="background-color: rgba(255, 250, 240, 0.92);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 p-5 fw-bold" style="color: #6B3E1A; font-family: 'Playfair Display', serif; letter-spacing: 2px;">
+                Fast Food Menu
+            </h2>
+            <p class="lead p-2" style="color: #D4A017;">Quick, crispy, and irresistibly satisfying – grab it and go!</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="startersGrid">
+            
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/platter-colorful-vegetable-fried-rice-with-grains_975188-207196.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Veg fried rice</h5>
+                        <p class="text-success fw-bold fs-5">₹80</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Veg fried rice" 
+                                data-price="80" 
+                                data-img="https://img.freepik.com/premium-photo/platter-colorful-vegetable-fried-rice-with-grains_975188-207196.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/chinese-bhel-is-spicy-indo-chinese-recipe-served-bowl-selective-focus_466689-51795.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Veg fried noodles </h5>
+                        <p class="text-success fw-bold fs-5">₹80</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Veg fried noodles " 
+                                data-price="80" 
+                                data-img="https://img.freepik.com/premium-photo/chinese-bhel-is-spicy-indo-chinese-recipe-served-bowl-selective-focus_466689-51795.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/free-photo/steamed-rice-with-seafood-calamary-corns-carrot-peas-side-view_141793-3564.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;"> Schezwan Veg fried rice </h5>
+                        <p class="text-success fw-bold fs-5">₹100</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name=" Schezwan Veg fried rice" 
+                                data-price="100" 
+                                data-img="https://img.freepik.com/free-photo/steamed-rice-with-seafood-calamary-corns-carrot-peas-side-view_141793-3564.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/chinese-bhel-is-spicy-indo-chinese-recipe-served-bowl-selective-focus_466689-51788.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;"> Schezwan Veg fried noodles</h5>
+                        <p class="text-success fw-bold fs-5">₹100</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name=" Schezwan Veg fried noodles" 
+                                data-price="100" 
+                                data-img="https://img.freepik.com/premium-photo/chinese-bhel-is-spicy-indo-chinese-recipe-served-bowl-selective-focus_466689-51788.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/fluffy-coconut-rice-with-herbs-cooked-rice-image_1036998-350189.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Curd rice  </h5>
+                        <p class="text-success fw-bold fs-5">₹</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Curd rice  " 
+                                data-price="" 
+                                data-img="https://img.freepik.com/premium-photo/fluffy-coconut-rice-with-herbs-cooked-rice-image_1036998-350189.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/hot-yellow-poha-garnished-with-peanuts-green-chili-lemon-coriander-dark-plate_1012570-789.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Lemon rice </h5>
+                        <p class="text-success fw-bold fs-5">₹100</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Lemon rice " 
+                                data-price="100" 
+                                data-img="https://img.freepik.com/premium-photo/hot-yellow-poha-garnished-with-peanuts-green-chili-lemon-coriander-dark-plate_1012570-789.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/broken-wheat-daliya-upma-served-bowl-selective-focus_466689-44473.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Jeera fried rice</h5>
+                        <p class="text-success fw-bold fs-5">₹80</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Jeera fried rice" 
+                                data-price="80" 
+                                data-img="https://img.freepik.com/premium-photo/broken-wheat-daliya-upma-served-bowl-selective-focus_466689-44473.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/free-photo/close-up-rice-with-vegetables-soy-sauce-chopsticks_23-2148377509.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Panner fried rice</h5>
+                        <p class="text-success fw-bold fs-5">₹140</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Panner fried rice" 
+                                data-price="140" 
+                                data-img="https://img.freepik.com/free-photo/close-up-rice-with-vegetables-soy-sauce-chopsticks_23-2148377509.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/traditional-italian-risotto-with-wild-rice-mushroom-parmesan_996271-9507.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Mashroom fried rice</h5>
+                        <p class="text-success fw-bold fs-5">₹140</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Mashroom fried rice" 
+                                data-price="140" 
+                                data-img="https://img.freepik.com/premium-photo/traditional-italian-risotto-with-wild-rice-mushroom-parmesan_996271-9507.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/close-up-food-served-plate-against-black-background_1048944-15622500.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Tomato fried rice</h5>
+                        <p class="text-success fw-bold fs-5">₹100</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Tomato fried rice" 
+                                data-price="100" 
+                                data-img="https://img.freepik.com/premium-photo/close-up-food-served-plate-against-black-background_1048944-15622500.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/fried-rice-with-chicken_1339-105644.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Sweet corn fried rice</h5>
+                        <p class="text-success fw-bold fs-5">₹100</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Sweet corn fried rice" 
+                                data-price="100" 
+                                data-img="https://img.freepik.com/premium-photo/fried-rice-with-chicken_1339-105644.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/homemade-fried-rice-with-mixed-vegetable-carrot-green-bean-peas-corn-egg_1339-135589.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Egg fried rice </h5>
+                        <p class="text-success fw-bold fs-5">₹100</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Egg fried rice " 
+                                data-price="100" 
+                                data-img="https://img.freepik.com/premium-photo/homemade-fried-rice-with-mixed-vegetable-carrot-green-bean-peas-corn-egg_1339-135589.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/free-photo/american-fried-rice_1339-4752.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;"> Schezwan Egg fried rice</h5>
+                        <p class="text-success fw-bold fs-5">₹120</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name=" Schezwan Egg fried rice" 
+                                data-price="120" 
+                                data-img="https://img.freepik.com/free-photo/american-fried-rice_1339-4752.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/chinese-bhel-is-spicy-indo-chinese-recipe-served-bowl-selective-focus_466689-52174.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;"> Schezwan Egg fried noodles</h5>
+                        <p class="text-success fw-bold fs-5">₹120</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name=" Schezwan Egg fried noodles" 
+                                data-price="120" 
+                                data-img="https://img.freepik.com/premium-photo/chinese-bhel-is-spicy-indo-chinese-recipe-served-bowl-selective-focus_466689-52174.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+                        <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/free-photo/fried-pork-with-dried-chili-salt-dark-background_1150-45512.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Chicken fried rice</h5>
+                        <p class="text-success fw-bold fs-5">₹130</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Chicken fried rice" 
+                                data-price="130" 
+                                data-img="https://img.freepik.com/free-photo/fried-pork-with-dried-chili-salt-dark-background_1150-45512.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+                        <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/pasta-spaghetti-with-prawn-vegetables_1472-181439.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Chiken fried noodles </h5>
+                        <p class="text-success fw-bold fs-5">₹130</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Chiken fried noodles " 
+                                data-price="130" 
+                                data-img="https://img.freepik.com/premium-photo/pasta-spaghetti-with-prawn-vegetables_1472-181439.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+                        <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/free-photo/fried-pork-with-dried-chili-salt-dark-background_1150-45509.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Schezwan Chiken fried rice</h5>
+                        <p class="text-success fw-bold fs-5">₹150</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Schezwan Chiken fried rice" 
+                                data-price="150" 
+                                data-img="https://img.freepik.com/free-photo/fried-pork-with-dried-chili-salt-dark-background_1150-45509.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+                        <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/pasta-spaghetti-with-prawn-vegetables_1472-166171.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Schezwan Chicken fried noodles</h5>
+                        <p class="text-success fw-bold fs-5">₹150</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Chicken pakoda" 
+                                data-price="150" 
+                                data-img="https://img.freepik.com/premium-photo/pasta-spaghetti-with-prawn-vegetables_1472-166171.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+                        <!-- <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/indian-cuisene-tandoori-chicken-65_1472-213169.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Pepper chiken</h5>
+                        <p class="text-success fw-bold fs-5">₹180</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Pepper chiken" 
+                                data-price="180" 
+                                data-img="https://img.freepik.com/premium-photo/indian-cuisene-tandoori-chicken-65_1472-213169.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+                 <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/free-photo/meatballs-with-vegetables-tomato-sauce_1220-7419.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Garlic chicken</h5>
+                        <p class="text-success fw-bold fs-5">₹180</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Garlic chicken" 
+                                data-price="180" 
+                                data-img="https://img.freepik.com/free-photo/meatballs-with-vegetables-tomato-sauce_1220-7419.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+                     <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/indian-mackerel-rastrelliger-kanagurta-bangda-fry-fish-fry-rustic-wooden-background-selective-focus_726363-1201.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Appollo fish 65</h5>
+                        <p class="text-success fw-bold fs-5">₹220</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Appollo fish 65" 
+                                data-price="220" 
+                                data-img="https://img.freepik.com/premium-photo/indian-mackerel-rastrelliger-kanagurta-bangda-fry-fish-fry-rustic-wooden-background-selective-focus_726363-1201.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+                     <div class="col">
+                <div class="card h-100 border-0 shadow-sm animate-card">
+                    <img src="https://img.freepik.com/premium-photo/high-angle-view-meat-plate_1048944-10013454.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80" class="card-img-top" alt="Chicken Tikka">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold" style="color: #6B3E1A;">Chilli apollo</h5>
+                        <p class="text-success fw-bold fs-5">₹220</p>
+                        <button class="btn btn-order btn-sm" 
+                                data-name="Chilli apollo" 
+                                data-price="220" 
+                                data-img="https://img.freepik.com/premium-photo/high-angle-view-meat-plate_1048944-10013454.jpg?uid=R226247758&ga=GA1.1.2060109563.1763182011&semt=ais_hybrid&w=740&q=80">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+
+            
+            
+        </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1050;">
+        <button id="cartBtn" class="btn btn-warning rounded-circle shadow-lg p-3" data-bs-toggle="modal" data-bs-target="#cartModal">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCount" class="badge bg-danger rounded-pill">0</span>
+        </button>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-dark">
+                    <h5 class="modal-title">Your Order Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="cartItems">
+                    <p class="text-center text-muted">Your cart is empty</p>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <h5>Total: <span id="cartTotal">₹0</span></h5>
+                    <button id="placeOrderBtn" class="btn btn-success" disabled>Place Order</button>
+                    <p class="text-muted small mt-2">
+                        Note: On desktop, if the message doesn't appear automatically, please paste it from here after the chat opens:<br>
+                    <span id="copyMessage" style="background:#eee;padding:10px;display:block;margin-top:10px;cursor:pointer;" onclick="navigator.clipboard.writeText(this.textContent)">[Message will appear here]</span>
+                      <button class="btn btn-sm btn-secondary mt-2" onclick="navigator.clipboard.writeText(document.getElementById('copyMessage').textContent)">Copy Message</button>
+                 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      <footer id="contact" class="footer py-5 bg-dark text-white">
+    <div class="container text-center">
+        <!-- Main Title -->
+        <h3 class="mb-3 fw-bold" style="font-family: 'Playfair Display', serif; letter-spacing: 2px;">
+            TELUGU FOOD COURT
+        </h3>
+
+        <!-- Contact Us -->
+        <p class="mb-4 fs-5">Contact Us</p>
+
+        <!-- Social Icons -->
+        <div class="social-icons mb-4">
+            <a href="https://instagram.com/yourusername" target="blank" class="mx-3 text-white">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://wa.me/918247544593" target="_blank" class="mx-3 text-white">
+                <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
+        </div>
+
+        <!-- Copyright -->
+         <h3 class="mb-3 fw-bold" style="font-family: 'Playfair Display', serif; letter-spacing: 2px;">
+            Developed by :
+        </h3>
+        <p class="mb-0 small" style="font-family: 'Playfair Display', serif; letter-spacing: 2px;">
+            &copy; MAYYRAX PRIVATE LIMITED. ALL RIGHTS RESERVED.
+        </p>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- <script src="starters.js"></script> -->
+<script>
+// Load cart from localStorage (works across all pages)
+let cart = JSON.parse(localStorage.getItem('tfcCart')) || [];
+
+// Save cart every time it changes
+function saveCart() {
+    localStorage.setItem('tfcCart', JSON.stringify(cart));
+}
+
+// Update cart display
+function updateCart() {
+    const cartItems = document.getElementById('cartItems');
+    const cartTotal = document.getElementById('cartTotal');
+    const cartCount = document.getElementById('cartCount');
+    const placeOrderBtn = document.getElementById('placeOrderBtn');
+
+    if (!cartItems || !cartTotal || !cartCount || !placeOrderBtn) return;
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = '<p class="text-center text-muted">Your cart is empty</p>';
+        cartTotal.textContent = '₹0';
+        cartCount.textContent = '0';
+        placeOrderBtn.disabled = true;
+        return;
+    }
+
+    let total = 0;
+    let html = '';
+    cart.forEach((item, i) => {
+        const subtotal = item.price * item.qty;
+        total += subtotal;
+        html += `
+            <div class="d-flex align-items-center mb-3 pb-3 border-bottom">
+                <img src="${item.img}" class="rounded me-3" style="width:70px;height:70px;object-fit:cover;">
+                <div class="flex-grow-1">
+                    <strong style="color:#6B3E1A;">${item.name}</strong><br>
+                    <small class="text-muted">${item.qty} × ₹${item.price} each = 
+                        <strong class="text-success">₹${subtotal}</strong>
+                    </small>
+                </div>
+                <button class="btn btn-danger btn-sm rounded-circle" onclick="removeItem(${i})">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>`;
+    });
+
+    cartItems.innerHTML = html;
+    cartTotal.textContent = `₹${total}`;
+    cartCount.textContent = cart.length;
+    placeOrderBtn.disabled = false;
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    saveCart();
+    updateCart();
+}
+
+// Run updateCart when page loads
+document.addEventListener('DOMContentLoaded', updateCart);
+
+// Normal items
+document.querySelectorAll('.btn-order:not(.order-with-plate)').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const name = btn.dataset.name;
+        const price = parseInt(btn.dataset.price);
+        const img = btn.dataset.img;
+
+        const qty = parseInt(prompt(`How many ${name}? (₹${price} each)`, "1") || "0");
+        if (qty <= 0) return alert("Invalid quantity!");
+
+        const existing = cart.find(item => item.name === name);
+        if (existing) existing.qty += qty;
+        else cart.push({ name, price, qty, img });
+
+        saveCart();
+        updateCart();
+        alert(`${qty} × ${name} added!`);
+    });
+});
+
+// Plate selection items (like Fry Biryani)
+document.querySelectorAll('.order-with-plate').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const baseName = btn.dataset.baseName;
+        const img = btn.dataset.img;
+
+        const radio = btn.closest('.card-body').querySelector('input.plate-radio:checked');
+        if (!radio) return alert("Please select Half or Full plate!");
+
+        const plateType = radio.value === 'full' ? 'Full Plate' : 'Half Plate';
+        const price = parseInt(radio.dataset.price);
+        const fullName = `${baseName} - ${plateType}`;
+
+        const qty = parseInt(prompt(`How many ${fullName}? (₹${price} each)`, "1") || "0");
+        if (qty <= 0) return alert("Invalid quantity!");
+
+        const existing = cart.find(item => item.name === fullName);
+        if (existing) existing.qty += qty;
+        else cart.push({ name: fullName, price, qty, img });
+
+        saveCart();
+        updateCart();
+        alert(`${qty} × ${fullName} added!`);
+    });
+});
+
+// MAIN FIX: Place Order with "Want More?" + WhatsApp
+// Place Order - Improved for better WhatsApp compatibility
+document.getElementById('placeOrderBtn').addEventListener('click', () => {
+    if (cart.length === 0) return alert("Your cart is empty!");
+
+    const wantsMore = confirm("Do you want to add more items?\nOK = Continue shopping\nCancel = Place order now");
+    if (wantsMore) {
+        window.location.href = "menucard.html"; // Your main menu page
+        return;
+    }
+
+    const address = prompt("📍 Enter your delivery address:");
+    if (!address?.trim()) return alert("Address required!");
+
+    let message = "*New Order - Telugu Food Court* 🍛\n\n";
+    message += "🛒 *memu pettina orders:*\n";
+    let total = 0;
+    cart.forEach(item => {
+        const amt = item.price * item.qty;
+        total += amt;
+        message += `• ${item.name} × ${item.qty} = ₹${amt}\n`;
+    });
+    message += `\n*Total: ₹${total}*\n`;
+    message += `*Address:* ${address.trim()}\n\nEvi chalu inka kavali ante memu order chestham\n\nTHANK YOU 🙏`;
+
+    // Fill the copy message box (for desktop fallback)
+    const copyBox = document.getElementById('copyMessage');
+    if (copyBox) copyBox.textContent = message.replace(/\n/g, '\n'); // Preserve line breaks
+
+    const phone = "918247544593"; // Your number (no + or spaces)
+    const encodedMsg = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${phone}?text=${encodedMsg}`;
+
+    // Try to open WhatsApp
+    const opened = window.open(whatsappURL, '_blank');
+
+    if (!opened) {
+        alert("Popup blocked! Please allow popups and try again, or copy the message below and paste in WhatsApp manually.");
+    } else {
+        // Small delay to let WhatsApp load
+        setTimeout(() => {
+            alert("WhatsApp opened! If message didn't appear, copy it from the cart modal and paste it.");
+        }, 1000);
+    }
+
+    // Optional: Clear cart after order
+    if (confirm("Order sent! Clear cart now?")) {
+        cart = [];
+        saveCart();
+        updateCart();
+        bootstrap.Modal.getInstance(document.getElementById('cartModal')).hide();
+    }
+});
+</script>
+</body>
+</html>
