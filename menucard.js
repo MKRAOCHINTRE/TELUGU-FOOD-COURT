@@ -116,16 +116,16 @@ document.getElementById('placeOrderBtn').addEventListener('click', () => {
     const address = prompt("Enter your delivery address:");
     if (!address?.trim()) return alert("Address required!");
 
-    let message = "*New Order - Telugu Food Court*\n\n";
-    message+="memu pettina orders:\n"
+      let message = "*🍛 New Order - Telugu Food Court*\n\n";
+    message+="📋 Order Details:\n"
     let total = 0;
     cart.forEach(item => {
         const amt = item.price * item.qty;
         total += amt;
         message += `• ${item.name} × ${item.qty} = ₹${amt}\n`;
     });
-    message += `\n*Total: ₹${total}*\n`;
-    message += `*Address:* ${address.trim()}\n\nThondarga Thisukoni Randi Memu Wait Chesthunam\n\nThank you! `;
+    message += `\n*💰 Total Amount: ₹${total}*\n`;
+    message += `*📍 Delivery Address:* ${address.trim()}\n\nThank you for your order! 🙏 We'll prepare it fresh `;
 
     // Fill copy box for desktop fallback
     const copyBox = document.getElementById('copyMessage');
@@ -147,5 +147,6 @@ document.getElementById('placeOrderBtn').addEventListener('click', () => {
         }
     }, 10000);
 });
+
 
 
